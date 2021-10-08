@@ -7,15 +7,27 @@
 # for letter in range(len(needs_reversed), -1, -1):
 #     print(letter)
 
-string = "Hello world"
-for letter in range(len(string) - 1, -1, -1):
-    print(string[letter])
+# string = "Hello world"
+# for letter in range(len(string) - 1, -1, -1):
+#     print(string[letter])
 
 # 2
 # Capitalize letter
 # a. Write code that takes a string as input and capitalize the first letter of each word. Words
 # will be separated by only one space. i.e. “hello world” should be outputted as “Hello
 # World”
+
+string = "Hello world i like pie"
+for letter in range(len(string)):
+    if string[letter - 1] == " ":
+        continue
+    else:
+        if string[letter] == " ":
+            next_letter = string[letter + 1]
+            print(" ")
+            print(next_letter.upper())
+        else:
+            print(string[letter])
 
 # 3
 # Compress a string of characters

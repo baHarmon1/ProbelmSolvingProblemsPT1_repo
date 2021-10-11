@@ -47,13 +47,15 @@ cache_c = ""
 final_string = ""
 
 for index_num in range(len(original_string)):
-    if original_string[index_num] == "a":
+    if index_num == (len(original_string)-1):
         cache_a += original_string[index_num]
-        if original_string[index_num + 1] != "a" or original_string[index_num] == original_string[28]:
+        final_string = final_string + str(len(cache_a)) + "a"
+        cache_a = ""
+    elif original_string[index_num] == "a":
+        cache_a += original_string[index_num]
+        if original_string[index_num + 1] != "a":
             final_string = final_string + str(len(cache_a)) + "a"
             cache_a = ""
-        else:
-            continue
     elif original_string[index_num] == "b":
         cache_b += original_string[index_num]
         if original_string[index_num + 1] != "b":
